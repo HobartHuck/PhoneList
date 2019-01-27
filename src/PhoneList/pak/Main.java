@@ -14,7 +14,7 @@ public class Main {
         PhoneNumber _Ph = new PhoneNumber(_str);
         System.out.println();
         System.out.println(_Ph.get_Number());
-        System.out.println(_Ph.get_formattedNumber());
+        System.out.println(_Ph.get_formattedNumber()+"\t"+_Ph.get_NumberDescription());
 
     /*
     Scanner  _Sc = new Scanner(System.in);

@@ -2,6 +2,7 @@ package PhoneList.pak;
 
 public class PhoneNumber {
     private String _Number;
+    private String _NumberDescription;
 
 
     public PhoneNumber(String _inputString){
@@ -15,6 +16,7 @@ public class PhoneNumber {
             if (j>=l) break;
         }
     this._Number=str;
+    this._NumberDescription="Mobile";
     }
 /***********************************************************************************/
     public String get_Number(){return _Number;}
@@ -28,6 +30,14 @@ public class PhoneNumber {
             if(i==7|i==9)str=str+'-';
         }
     return str;
+    }
+/***********************************************************************************/
+    public void set_NumberDescription(String Description){
+        this._NumberDescription=Description;
+    }
+/***********************************************************************************/
+    public String get_NumberDescription(){
+        return this._NumberDescription;
     }
 
 }
