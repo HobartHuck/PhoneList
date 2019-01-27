@@ -3,7 +3,7 @@ package PhoneList.pak;
 public class PhoneNumber {
     private String _Number;
     private String _NumberDescription;
-
+    //проверка изменений.
 
     public PhoneNumber(String _inputString){
     String str="+";
