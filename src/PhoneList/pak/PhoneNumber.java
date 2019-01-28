@@ -7,16 +7,27 @@ public class PhoneNumber {
 
     public PhoneNumber(String _inputString){
     String str="+";
-    int j=0,k=0,l=11;
-        if(_inputString.charAt(0)=='8'){str="+7";k=1;l=10;}
-        for (int i=k; i<_inputString.length();i++){
-            if(_inputString.charAt(i)>='0' & _inputString.charAt(i)<='9'){//is a number
-              str=str+_inputString.charAt(i);j++;
+        if( ! _inputString.isEmpty()) {
+            int j = 0, k = 0, l = 11;
+            if (_inputString.charAt(0) == '8') {
+                str = "+7";
+                k = 1;
+                l = 10;
             }
-            if (j>=l) break;
+            for (int i = k; i < _inputString.length(); i++) {
+                if (_inputString.charAt(i) >= '0' & _inputString.charAt(i) <= '9') {//is a number
+                    str = str + _inputString.charAt(i);
+                    j++;
+                }
+                if (j >= l) break;
+            }
+            this._Number = str;
+            this._NumberDescription = "Mobile";
         }
-    this._Number=str;
-    this._NumberDescription="Mobile";
+        else{
+            this._Number="+00000000000";
+            this._NumberDescription="";
+        }
     }
 /***********************************************************************************/
     public String get_Number(){return _Number;}
